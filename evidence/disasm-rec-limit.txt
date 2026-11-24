@@ -1,0 +1,99 @@
+Movie recording time limit computation: per-mode seconds {30,60,180,300,1800} stored to struct+0x2c (VA 0x80F74F28 area). Normal modes end at 1800 (0x708).
+0x8054dd40  addiu    $v1, $zero, 5
+0x8054dd44  beq      $a0, $v1, 0x8054dd84
+0x8054dd48  nop      
+0x8054dd4c  j        0x8054dda4
+0x8054dd50  addiu    $v1, $zero, 0x1e
+0x8054dd54  sltiu    $v0, $a0, 6
+0x8054dd58  beqz     $v0, 0x8054dd9c
+0x8054dd5c  lui      $v0, 0x80a8
+0x8054dd60  sll      $v1, $a0, 2
+0x8054dd64  addiu    $v0, $v0, -0xa2c  ; -> 0x80a7f5d4
+0x8054dd68  addu     $v0, $v0, $v1
+0x8054dd6c  lw       $v1, ($v0)
+0x8054dd70  lui      $v0, 0x80f7
+0x8054dd74  jr       $v1
+0x8054dd78  addiu    $v0, $v0, 0x4efc
+0x8054dd7c  j        0x8054dda4
+0x8054dd80  addiu    $v1, $zero, 0x1e
+0x8054dd84  j        0x8054dda4
+0x8054dd88  addiu    $v1, $zero, 0xb4
+0x8054dd8c  j        0x8054dda4
+0x8054dd90  addiu    $v1, $zero, 0x12c
+0x8054dd94  j        0x8054dda4
+0x8054dd98  addiu    $v1, $zero, 0x708
+0x8054dd9c  addiu    $v0, $s0, 0x4efc
+0x8054dda0  addiu    $v1, $zero, 0x3c
+0x8054dda4  sh       $v1, 0x2c($v0)
+0x8054dda8  lui      $v0, 0x80f8
+0x8054ddac  addiu    $v1, $zero, 8
+0x8054ddb0  lbu      $v0, -0x74a8($v0)
+0x8054ddb4  bne      $v0, $v1, 0x8054ddd4
+0x8054ddb8  lui      $v1, 0x80e4
+0x8054ddbc  lui      $v1, 0x80dd
+0x8054ddc0  lw       $v1, 0x79ac($v1)
+0x8054ddc4  lbu      $a1, 0x23($v1)
+0x8054ddc8  addiu    $v1, $zero, 2
+0x8054ddcc  beq      $a1, $v1, 0x8054de38
+0x8054ddd0  lui      $v1, 0x80e4
+0x8054ddd4  lbu      $a1, -0x11fc($v1)
+0x8054ddd8  addiu    $v1, $zero, 2
+0x8054dddc  bne      $a1, $v1, 0x8054de50
+0x8054dde0  lui      $v1, 0x80dd
+0x8054dde4  addiu    $a1, $zero, 1
+0x8054dde8  lw       $v1, 0x79ac($v1)
+0x8054ddec  lbu      $a2, 0x2c($v1)
+0x8054ddf0  beq      $a2, $a1, 0x8054de50
+0x8054ddf4  nop      
+0x8054ddf8  beq      $v0, $a1, 0x8054de50
+0x8054ddfc  addiu    $a1, $zero, 3
+0x8054de00  beq      $v0, $a1, 0x8054de50
+0x8054de04  addiu    $a1, $zero, 5
+0x8054de08  beq      $v0, $a1, 0x8054de50
+0x8054de0c  addiu    $a1, $zero, 6
+0x8054de10  beq      $v0, $a1, 0x8054de50
+0x8054de14  addiu    $a1, $zero, 4
+0x8054de18  beq      $v0, $a1, 0x8054de50
+0x8054de1c  addiu    $v0, $zero, 0xc
+0x8054de20  lbu      $a1, 2($v1)
+0x8054de24  bne      $a1, $v0, 0x8054de54
+0x8054de28  lui      $v0, 0x80df
+0x8054de2c  lbu      $v0, 0x30($v1)
+0x8054de30  bnez     $v0, 0x8054de54
+0x8054de34  lui      $v0, 0x80df
+0x8054de38  sltiu    $a0, $a0, 2
+0x8054de3c  beqz     $a0, 0x8054de54
+0x8054de40  lui      $v0, 0x80df
+0x8054de44  addiu    $v0, $s0, 0x4efc
+0x8054de48  addiu    $v1, $zero, 0x12c
+0x8054de4c  sh       $v1, 0x2c($v0)
+0x8054de50  lui      $v0, 0x80df
+0x8054de54  lw       $v0, 0x2158($v0)
+0x8054de58  lw       $v0, ($v0)
+0x8054de5c  andi     $v0, $v0, 0x2000
+0x8054de60  bnez     $v0, 0x8054de7c
+0x8054de64  addiu    $v0, $s0, 0x4efc
+0x8054de68  lui      $v0, 0x80e4
+0x8054de6c  lbu      $v0, -0x11f4($v0)
+0x8054de70  beqz     $v0, 0x8054de88
+0x8054de74  lui      $v0, 0xb001
+0x8054de78  addiu    $v0, $s0, 0x4efc
+0x8054de7c  addiu    $v1, $zero, 0x708
+0x8054de80  sh       $v1, 0x2c($v0)
+0x8054de84  lui      $v0, 0xb001
+0x8054de88  lbu      $v0, -0x6731($v0)
+0x8054de8c  andi     $v0, $v0, 2
+0x8054de90  andi     $v0, $v0, 0xff
+0x8054de94  beqz     $v0, 0x8054deac
+0x8054de98  addiu    $v0, $s0, 0x4efc
+0x8054de9c  jal      0x801bcba4
+0x8054dea0  nop      
+0x8054dea4  beqz     $v0, 0x8054deb4
+0x8054dea8  addiu    $v0, $s0, 0x4efc
+0x8054deac  addiu    $v1, $zero, 0x708
+0x8054deb0  sh       $v1, 0x2c($v0)
+0x8054deb4  addiu    $s0, $s0, 0x4efc
+0x8054deb8  lw       $ra, 0x14($sp)
+0x8054debc  lhu      $v0, 0x2c($s0)
+0x8054dec0  sh       $v0, 0x2e($s0)
+0x8054dec4  lw       $s0, 0x10($sp)

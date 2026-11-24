@@ -1,0 +1,30 @@
+0x809e6624 STATE_CDSP_WAIT_FOR_WDR8x8_BUF
+0x809e6644 STATE_CDSP_WDR8x8_DO
+0x809e665c STATE_CDSP_WDR8x8_GAINMAP_GEN
+0x809e667c STATE_CDSP_WDR8x8_GAINMAP_SCALING_UP
+0x809e66a4 STATE_CDSP_WDR8x8_GAINMAP_MATCHUP
+0x809e66c8 STATE_CDSP_WDR8x8_PROCESS_DONE
+0x809e7a08 #S#CB#N#WDR8x8 IQ_CB s
+0x809e7a20 #E#CB#N#WDR8x8 IQ_CB e
+0x809e7a38 #S#CB#N#WDR8x8 FACE_CB s
+0x809e7a54 #E#CB#N#WDR8x8 FACE_CB e
+0x809e9191 [41mwdr8x8 avai YUV num: %d 
+0x809ed074 MEDIA_REC_SEAMLESS_CALLBACK
+0x809ed32c MEDIA_REC_SEAMLESS_TIME_SLOT
+0x809ed34c MEDIA_REC_SEAMLESS_SIZE_SLOT
+0x809ed36c MEDIA_REC_SEAMLESS_FULL_OPTION
+0x809ed50c MEDIA_ATTR_VIDEO_AVG_BITRATE
+0x809ee700 [SEAMLESS]  Enable time and size slot type together is forbidden. Please Clear one of them.
+0x809ee760 [seamless] SlotType:%d, SlotSize:%d(ms or KB), spaceThr:%d KB, bitRate:%d KB
+0x809ee99c fscSeamlessHandle
+0x809ef610 <msdmx> MEDIA_ATTR_VIDEO_AVG_BITRATE=%d
+0x809efc54 DMK> MEDIA_ATTR_VIDEO_AVG_BITRATE = %u
+0x809f02fc Target fps %d/%d, bitrate %d
+0x809f0720 multi wdr disabled
+0x809ff430 config AE pos to after RGBWDR is not allowed (wdren:0x%x)
+0x809ff46c config AE pos to after YUVWDR is not allowed (wdren:0x%x)
+0x80a49cf0 Please type seamless cfg slot/full end or overwrite, argc:%d
+0x80a4a3c8 seamless
+0x80a57cec Target fps: %d/%d, byte rate: %d
+0x80a587d0 mov_seamlessStreamBackupInit
+0x80a587f0 mov_seamlessStreamBackupDo

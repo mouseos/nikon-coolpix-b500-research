@@ -1,0 +1,87 @@
+H.264 encoder driver init (codecs/h264enc/h264_encode.c): hardware encoder, VLC threads evtVlcEn/thdVlcEn, register blocks at 0xB000xxxx, prints 'Target fps %d/%d, bitrate %d' from passed config
+0x800df588  addiu    $sp, $sp, -0xd0
+0x800df58c  sw       $s1, 0xac($sp)
+0x800df590  move     $s1, $a0
+0x800df594  move     $a0, $zero
+0x800df598  sw       $ra, 0xcc($sp)
+0x800df59c  sw       $fp, 0xc8($sp)
+0x800df5a0  sw       $s7, 0xc4($sp)
+0x800df5a4  sw       $s5, 0xbc($sp)
+0x800df5a8  sw       $s4, 0xb8($sp)
+0x800df5ac  sw       $s3, 0xb4($sp)
+0x800df5b0  sw       $s2, 0xb0($sp)
+0x800df5b4  sw       $s0, 0xa8($sp)
+0x800df5b8  sw       $s6, 0xc0($sp)
+0x800df5bc  sw       $zero, 0x60($sp)
+0x800df5c0  sw       $zero, 0x64($sp)
+0x800df5c4  sw       $zero, 0x68($sp)
+0x800df5c8  sw       $zero, 0x6c($sp)
+0x800df5cc  sw       $zero, 0x70($sp)
+0x800df5d0  sw       $zero, 0x74($sp)
+0x800df5d4  sw       $zero, 0x78($sp)
+0x800df5d8  sw       $zero, 0x7c($sp)
+0x800df5dc  sw       $zero, 0x80($sp)
+0x800df5e0  sw       $zero, 0x84($sp)
+0x800df5e4  sw       $zero, 0x88($sp)
+0x800df5e8  sw       $zero, 0x28($sp)
+0x800df5ec  sw       $zero, 0x2c($sp)
+0x800df5f0  sw       $zero, 0x30($sp)
+0x800df5f4  jal      0x80133af4
+0x800df5f8  sw       $zero, 0x34($sp)
+0x800df5fc  move     $a0, $v0
+0x800df600  lui      $s0, 0x80de
+0x800df604  addiu    $v0, $sp, 0x24
+0x800df608  addiu    $s0, $s0, -0x4998  ; -> 0x80ddb668
+0x800df60c  sw       $v0, 0x10($sp)
+0x800df610  addiu    $a1, $zero, 0x1b
+0x800df614  addiu    $v0, $sp, 0x20
+0x800df618  move     $a2, $zero
+0x800df61c  move     $a3, $zero
+0x800df620  sw       $v0, 0x14($sp)
+0x800df624  jal      0x80185b70
+0x800df628  lui      $s2, 0x809f
+0x800df62c  lui      $s7, 0x809f
+0x800df630  move     $v0, $zero
+0x800df634  move     $v1, $zero
+0x800df638  lui      $fp, 0x809f
+0x800df63c  sw       $zero, 0x24($s0)
+0x800df640  sw       $v0, 0x28($s0)
+0x800df644  sw       $v1, 0x2c($s0)
+0x800df648  move     $s4, $s0
+0x800df64c  addiu    $s2, $s2, 0x40c  ; -> 0x809f040c
+0x800df650  lui      $s5, 0xb000
+0x800df654  move     $s3, $zero
+0x800df658  addiu    $s7, $s7, 0x2fc  ; -> 0x809f02fc
+0x800df65c  addiu    $fp, $fp, 0x2dc  ; -> "codecs/h264enc/h264_encode.c"
+0x800df660  addiu    $v0, $zero, 1
+0x800df664  sllv     $v0, $v0, $s3
+0x800df668  and      $v0, $v0, $s1
+0x800df66c  bnez     $v0, 0x800df768
+0x800df670  sll      $s6, $s3, 5
+0x800df674  addiu    $s3, $s3, 1
+0x800df678  addiu    $v0, $zero, 2
+0x800df67c  addiu    $s4, $s4, 4
+0x800df680  addiu    $s5, $s5, 0x200
+0x800df684  bne      $s3, $v0, 0x800df660
+0x800df688  addiu    $s2, $s2, 0x3c  ; -> 0x809f003c
+0x800df68c  andi     $v0, $s1, 1
+0x800df690  bnez     $v0, 0x800dfb84
+0x800df694  lui      $fp, 0x809f
+0x800df698  lui      $s7, 0x809f
+0x800df69c  lui      $s5, 0x809f
+0x800df6a0  sw       $zero, 0x308($s0)
+0x800df6a4  move     $s2, $zero
+0x800df6a8  addiu    $s4, $zero, 1
+0x800df6ac  addiu    $fp, $fp, 0x324  ; -> "evtVlcEn"
+0x800df6b0  addiu    $s7, $s7, 0x330  ; -> "thdVlcEn"
+0x800df6b4  lui      $s6, 0x800e
+0x800df6b8  addiu    $s5, $s5, 0x4dc  ; -> "h264EncStart"
+0x800df6bc  sllv     $v0, $s4, $s2
+0x800df6c0  and      $v0, $v0, $s1
+0x800df6c4  bnez     $v0, 0x800dfad4
+0x800df6c8  sll      $v0, $s2, 3
+0x800df6cc  addiu    $s2, $s2, 1  ; -> 0x809f0001
+0x800df6d0  addiu    $v0, $zero, 2
+0x800df6d4  bne      $s2, $v0, 0x800df6c0
+0x800df6d8  sllv     $v0, $s4, $s2
+0x800df6dc  jal      0x800bf9ac
