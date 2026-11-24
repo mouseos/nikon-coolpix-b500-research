@@ -1,0 +1,12 @@
+Cross-model SUNP firmware comparison (measured 2026-11-25)
+
+B500   firmware.bin  size=39106238 sha256=b1ab90723d9d1e42957b0fef18bcf186f430bffb2a240f2a36f7c10ad102a50e
+XP80   FPUPDATE.DAT  size=26984426 sha256=4e2f410535d39feb39c0963d9166473a8c4ec9632aa7c78d67f1708239ca952a (Fujifilm official dl.fujifilm-x.com)
+CXGOLD CXGOLD.BRN    size=10923226 sha256=db330a2c633c077452537bd8e9a06c7bdc2cadbe5fd6e9a6efc25b4eac603134 (zip sha256=3a4b6a19ec81f48080655f58c503f16cb853099307c3089714a146acdeac5a0f, ex activeon.com via Wayback 20190524041459)
+H9     SPHOST.BRN    size=8586458  sha256=38e2f8bf2f0864b6c4d55465106fb77c27786c29eb617dc92915dc45f14770dc (ex ftp.eken.com H9-720P120FPS-160701SY.rar via Wayback 20171105045123, rar sha256=6e83f377a88a8dd28ff3e5aa0a5a09f3789f17e676f3426ea25ed37de5690b34)
+
+Boot region byte comparison (offset 0x200-0x90600, 590848 bytes):
+  XP80 vs CXGOLD : 590848/590848 = 100.00% identical
+  XP80 vs H9     : 590848/590848 = 100.00% identical
+  XP80 vs B500   : 60661/590848 = 10.27% identical (B500 boot region extends to 0x93400)
+  H9   vs B500   : 60661/590848 = 10.27% identical

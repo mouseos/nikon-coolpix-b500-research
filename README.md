@@ -55,6 +55,8 @@ COOLPIX B500 の公式ファームウェアアップデーター (V1.5) を展�
 - [14 動画の HDR、時間上限、ビットレート、解像度上限](docs/14-video-limits.md)
   — 時間上限の定数、HW エンコーダ、WDR のデータ不在、1080p の天井
 - [15 ISP の未使用機能](docs/15-isp-unused-features.md)
+
+- [16 同一チップ他機種とのファームウェア比較](docs/16-cross-model-comparison.md)
   — WDR、Super Resolution、JPEG Ultra、Hi-ISO フローの利用状況
 
 ## 調査方法
