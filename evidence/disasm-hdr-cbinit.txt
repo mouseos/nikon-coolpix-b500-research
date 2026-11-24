@@ -1,0 +1,67 @@
+Morpho HDR callback init (VA 0x803bd144): mode flag 0x80FD8CC8 != 0 -> 'MF HDR flow ON', registers callbacks with param struct 0x80FD8CB0
+0x803bd144  addiu    $sp, $sp, -0x18
+0x803bd148  addiu    $v0, $zero, 1
+0x803bd14c  sw       $s0, 0x10($sp)
+0x803bd150  lui      $s0, 0x80fe
+0x803bd154  sw       $ra, 0x14($sp)
+0x803bd158  lw       $v1, -0x7338($s0)
+0x803bd15c  bne      $v1, $v0, 0x803bd17c
+0x803bd160  lui      $a0, 0x80a5
+0x803bd164  lui      $a2, 0x80a5
+0x803bd168  addiu    $a0, $a0, -0x242c  ; -> "sp5k_morpho_hdr.c"
+0x803bd16c  addiu    $a1, $zero, 0x5b3
+0x803bd170  addiu    $a2, $a2, -0x2388  ; -> "morphoHdrCbInit mode %d"
+0x803bd174  jal      0x800684d0
+0x803bd178  addiu    $a3, $zero, 1
+0x803bd17c  lui      $a1, 0x80a5
+0x803bd180  lw       $a2, -0x7338($s0)
+0x803bd184  move     $a0, $zero
+0x803bd188  jal      0x800679a4
+0x803bd18c  addiu    $a1, $a1, -0x2370  ; -> "[HDR] cb init %d"
+0x803bd190  lw       $v0, -0x7338($s0)
+0x803bd194  beqz     $v0, 0x803bd1f4
+0x803bd198  lui      $s0, 0x80fe
+0x803bd19c  addiu    $s0, $s0, -0x7350
+0x803bd1a0  lui      $a1, 0x80a5
+0x803bd1a4  move     $a0, $zero
+0x803bd1a8  jal      0x800679a4
+0x803bd1ac  addiu    $a1, $a1, -0x235c  ; -> "MF HDR flow ON"
+0x803bd1b0  lw       $a1, 4($s0)
+0x803bd1b4  jal      0x800afbe4
+0x803bd1b8  addiu    $a0, $zero, 1
+0x803bd1bc  lw       $a1, 8($s0)
+0x803bd1c0  jal      0x800afbe4
+0x803bd1c4  addiu    $a0, $zero, 2
+0x803bd1c8  addiu    $a0, $zero, 3
+0x803bd1cc  jal      0x800afbe4
+0x803bd1d0  move     $a1, $zero
+0x803bd1d4  lw       $a1, 0xc($s0)
+0x803bd1d8  jal      0x800afbe4
+0x803bd1dc  addiu    $a0, $zero, 4
+0x803bd1e0  lw       $a1, 0x10($s0)
+0x803bd1e4  jal      0x800afbe4
+0x803bd1e8  addiu    $a0, $zero, 6
+0x803bd1ec  j        0x803bd234
+0x803bd1f0  addiu    $a0, $zero, 5
+0x803bd1f4  addiu    $a0, $zero, 1
+0x803bd1f8  jal      0x800afbe4
+0x803bd1fc  move     $a1, $zero
+0x803bd200  addiu    $a0, $zero, 2
+0x803bd204  jal      0x800afbe4
+0x803bd208  move     $a1, $zero
+0x803bd20c  addiu    $a0, $zero, 3
+0x803bd210  jal      0x800afbe4
+0x803bd214  move     $a1, $zero
+0x803bd218  addiu    $a0, $zero, 4
+0x803bd21c  jal      0x800afbe4
+0x803bd220  move     $a1, $zero
+0x803bd224  addiu    $a0, $zero, 5
+0x803bd228  jal      0x800afbe4
+0x803bd22c  move     $a1, $zero
+0x803bd230  addiu    $a0, $zero, 6
+0x803bd234  jal      0x800afbe4
+0x803bd238  move     $a1, $zero
+0x803bd23c  lw       $ra, 0x14($sp)
+0x803bd240  move     $v0, $zero
+0x803bd244  lw       $s0, 0x10($sp)
+0x803bd248  jr       $ra

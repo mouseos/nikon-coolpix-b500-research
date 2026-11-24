@@ -1,0 +1,103 @@
+HDR snap set (VA 0x803bd250): argument != 0 -> mode flag = 2 (MF HDR), == 0 -> mode flag = 0
+0x803bd250  addiu    $sp, $sp, -0x20
+0x803bd254  lui      $v0, 0x80fe
+0x803bd258  sw       $s0, 0x14($sp)
+0x803bd25c  lui      $a1, 0x80a5
+0x803bd260  move     $s0, $a0
+0x803bd264  lbu      $a3, -0x76b2($v0)
+0x803bd268  move     $a0, $zero
+0x803bd26c  addiu    $a1, $a1, -0x234c  ; -> "[HDR] snap set s %d 0x%x"
+0x803bd270  move     $a2, $s0
+0x803bd274  sw       $s1, 0x18($sp)
+0x803bd278  sw       $ra, 0x1c($sp)
+0x803bd27c  jal      0x800679a4
+0x803bd280  lui      $s1, 0x80fe
+0x803bd284  beqz     $s0, 0x803bd2a0
+0x803bd288  addiu    $v0, $zero, 2
+0x803bd28c  sw       $v0, -0x7338($s1)
+0x803bd290  lui      $v0, 0x80fe
+0x803bd294  move     $a0, $zero
+0x803bd298  j        0x803bd2ac
+0x803bd29c  lw       $a1, -0x7350($v0)
+0x803bd2a0  sw       $zero, -0x7338($s1)
+0x803bd2a4  move     $a0, $zero
+0x803bd2a8  move     $a1, $zero
+0x803bd2ac  jal      0x800afbe4
+0x803bd2b0  nop      
+0x803bd2b4  jal      0x800afb98
+0x803bd2b8  lw       $a0, -0x7338($s1)
+0x803bd2bc  lw       $ra, 0x1c($sp)
+0x803bd2c0  move     $v0, $zero
+0x803bd2c4  lw       $s1, 0x18($sp)
+0x803bd2c8  lw       $s0, 0x14($sp)
+0x803bd2cc  jr       $ra
+
+PhotoSolid cb init (VA 0x803b9460) reads the SAME mode flag: ==2 -> Morpho HDR, !=0 -> 'MF psolid flow ON' (mode 1 is set by PSOLID snap set 0x803b9570)
+0x803b9460  addiu    $sp, $sp, -0x18
+0x803b9464  lui      $a1, 0x80a5
+0x803b9468  sw       $s0, 0x10($sp)
+0x803b946c  lui      $s0, 0x80fe
+0x803b9470  move     $a0, $zero
+0x803b9474  lw       $a2, -0x7338($s0)
+0x803b9478  sw       $ra, 0x14($sp)
+0x803b947c  jal      0x800679a4
+0x803b9480  addiu    $a1, $a1, -0x3700  ; -> "[PSOLID] cb init %d"
+0x803b9484  lw       $v1, -0x7338($s0)
+0x803b9488  addiu    $v0, $zero, 2
+0x803b948c  bne      $v1, $v0, 0x803b94b4
+0x803b9490  lw       $v0, -0x7338($s0)
+0x803b9494  lui      $a0, 0x80a5
+0x803b9498  lui      $a2, 0x80a5
+0x803b949c  addiu    $a0, $a0, -0x3748  ; -> "sp5k_morpho_photosolid.c"
+0x803b94a0  addiu    $a1, $zero, 0x82e
+0x803b94a4  addiu    $a2, $a2, -0x36ec  ; -> "morphoPSolidCbInit mode %d"
+0x803b94a8  jal      0x800684d0
+0x803b94ac  addiu    $a3, $zero, 2
+0x803b94b0  lw       $v0, -0x7338($s0)
+0x803b94b4  beqz     $v0, 0x803b9514
+0x803b94b8  lui      $s0, 0x80fe
+0x803b94bc  addiu    $s0, $s0, -0x770c
+0x803b94c0  lui      $a1, 0x80a5
+0x803b94c4  move     $a0, $zero
+0x803b94c8  jal      0x800679a4
+0x803b94cc  addiu    $a1, $a1, -0x36d0  ; -> "MF psolid flow ON"
+0x803b94d0  lw       $a1, 4($s0)
+0x803b94d4  jal      0x800afbe4
+0x803b94d8  addiu    $a0, $zero, 1
+0x803b94dc  lw       $a1, 8($s0)
+0x803b94e0  jal      0x800afbe4
+0x803b94e4  addiu    $a0, $zero, 2
+0x803b94e8  lw       $a1, 0xc($s0)
+0x803b94ec  jal      0x800afbe4
+0x803b94f0  addiu    $a0, $zero, 4
+0x803b94f4  lw       $a1, 0x10($s0)
+0x803b94f8  jal      0x800afbe4
+0x803b94fc  addiu    $a0, $zero, 3
+0x803b9500  lw       $a1, 0x18($s0)
+0x803b9504  jal      0x800afbe4
+0x803b9508  addiu    $a0, $zero, 6
+0x803b950c  j        0x803b9554
+0x803b9510  addiu    $a0, $zero, 5
+0x803b9514  addiu    $a0, $zero, 1
+0x803b9518  jal      0x800afbe4
+0x803b951c  move     $a1, $zero
+0x803b9520  addiu    $a0, $zero, 2
+0x803b9524  jal      0x800afbe4
+0x803b9528  move     $a1, $zero
+0x803b952c  addiu    $a0, $zero, 4
+0x803b9530  jal      0x800afbe4
+0x803b9534  move     $a1, $zero
+0x803b9538  addiu    $a0, $zero, 3
+0x803b953c  jal      0x800afbe4
+0x803b9540  move     $a1, $zero
+0x803b9544  addiu    $a0, $zero, 5
+0x803b9548  jal      0x800afbe4
+0x803b954c  move     $a1, $zero
+0x803b9550  addiu    $a0, $zero, 6
+0x803b9554  jal      0x800afbe4
+0x803b9558  move     $a1, $zero
+0x803b955c  lw       $ra, 0x14($sp)
+0x803b9560  move     $v0, $zero
+0x803b9564  lw       $s0, 0x10($sp)
+0x803b9568  jr       $ra
+0x803b956c  addiu    $sp, $sp, 0x18

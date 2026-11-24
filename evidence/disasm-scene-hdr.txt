@@ -1,0 +1,17 @@
+Scene name -> scene ID mapping: 'BACK LIGHT' and 'BACKLIT HDR' both map to scene ID 2
+0x806539f8  lui      $a1, 0x80a8
+0x806539fc  addiu    $a0, $sp, 0x34
+0x80653a00  addiu    $a1, $a1, -0x3158  ; -> "BACK LIGHT     "
+0x80653a04  jal      0x801b7d80
+0x80653a08  addiu    $a2, $zero, 0x10
+0x80653a0c  beqz     $v0, 0x80653de0
+0x80653a10  addiu    $v0, $zero, 2
+0x80653a14  lui      $a1, 0x80a8
+0x80653a18  addiu    $a0, $sp, 0x34
+0x80653a1c  addiu    $a1, $a1, -0x3168  ; -> "BACKLIT HDR    "
+0x80653a20  jal      0x801b7d80
+0x80653a24  addiu    $a2, $zero, 0x10
+0x80653a28  bnez     $v0, 0x80653a38
+0x80653a2c  lui      $a1, 0x80a8
+0x80653a30  j        0x80653de0
+0x80653a34  addiu    $v0, $zero, 2
