@@ -1,0 +1,69 @@
+# テストモード突入の判定 (電源投入時のモード決定処理)
+
+0x805ebe30  lui      $v0, 0xb001
+0x805ebe34  lbu      $a0, -0x6fb4($v0)
+0x805ebe38  andi     $a0, $a0, 1
+0x805ebe3c  jal      0x806b4080
+0x805ebe40  xori     $a0, $a0, 1
+0x805ebe44  jal      0x806b456c
+0x805ebe48  nop      
+0x805ebe4c  move     $a1, $v0
+0x805ebe50  addiu    $v0, $s1, -0x1fa8
+0x805ebe54  sh       $a1, 0xcae($v0)
+0x805ebe58  jal      0x800636b8
+0x805ebe5c  sw       $a1, 0x18($sp)
+0x805ebe60  lui      $a0, 0x80a9
+0x805ebe64  lw       $a1, 0x18($sp)
+0x805ebe68  addiu    $a0, $a0, -0x31f8  ; -> 0x80a8ce08
+0x805ebe6c  jal      0x8006c1c8
+0x805ebe70  move     $a2, $v0
+0x805ebe74  jal      0x805c3be4
+0x805ebe78  nop      
+0x805ebe7c  beqz     $v0, 0x805ebe94
+0x805ebe80  nop      
+0x805ebe84  jal      0x805c3bc0
+0x805ebe88  nop      
+0x805ebe8c  beqz     $v0, 0x805ebec8
+0x805ebe90  nop      
+0x805ebe94  lui      $s0, 0xf200
+0x805ebe98  addiu    $a0, $s0, 0xf
+0x805ebe9c  jal      0x800145e8
+0x805ebea0  move     $a1, $zero
+0x805ebea4  addiu    $a0, $s0, 0x12
+0x805ebea8  lw       $ra, 0x2c($sp)
+0x805ebeac  lw       $s2, 0x28($sp)
+0x805ebeb0  lw       $s1, 0x24($sp)
+0x805ebeb4  lw       $s0, 0x20($sp)
+0x805ebeb8  move     $a1, $zero
+0x805ebebc  j        0x800145e8
+0x805ebec0  addiu    $sp, $sp, 0x30
+0x805ebec4  sb       $zero, 0x753d($s2)
+
+# 条件A: COLDDATA のバイト 0x1C を返す関数
+0x805c3be4  addiu    $sp, $sp, -0x18
+0x805c3be8  lui      $a0, 0x80a8
+0x805c3bec  sw       $s0, 0x10($sp)
+0x805c3bf0  lui      $s0, 0x80e4
+0x805c3bf4  addiu    $a3, $s0, -0x5384
+0x805c3bf8  addiu    $a0, $a0, 0x6500  ; -> "A:\RO_RES\COLDDATA.BIN"
+0x805c3bfc  move     $a1, $zero
+0x805c3c00  addiu    $a2, $zero, 0x400
+0x805c3c04  sw       $ra, 0x14($sp)
+0x805c3c08  jal      0x802224dc
+0x805c3c0c  addiu    $s0, $s0, -0x5384
+0x805c3c10  lw       $ra, 0x14($sp)
+0x805c3c14  lbu      $v0, 0x1c($s0)
+0x805c3c18  lw       $s0, 0x10($sp)
+0x805c3c1c  jr       $ra
+0x805c3c20  addiu    $sp, $sp, 0x18
+
+# 条件B: D:\EnableTest.txt の存在を返す関数
+0x805c3bc0  addiu    $sp, $sp, -0x18
+0x805c3bc4  lui      $a0, 0x80a8
+0x805c3bc8  sw       $ra, 0x14($sp)
+0x805c3bcc  jal      0x8021b98c
+0x805c3bd0  addiu    $a0, $a0, 0x7c80  ; -> "D:\EnableTest.txt"
+0x805c3bd4  lw       $ra, 0x14($sp)
+0x805c3bd8  sltu     $v0, $zero, $v0
+0x805c3bdc  jr       $ra
+0x805c3be0  addiu    $sp, $sp, 0x18

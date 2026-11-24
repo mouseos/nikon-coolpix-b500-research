@@ -1,0 +1,26 @@
+デバッグコンソールのコマンドトークン付近の文字列 (VA 0x80a44d60 から)
+ハンドラ 0x8039bxxx が strcmp (0x8006f818) で照合するトークン列。
+
+b'unt'
+b'cmdUsbUnmount'
+b'mm'
+b'mv'
+b'pc'
+b'A:\\RO_RES\\USBUVC15.BIN'
+b'\n----change to UVC1.0----'
+b'A:\\RO_RES\\USBUVC.BIN'
+b'multi'
+b'sramchk'
+b'CPU direct access USB SRAM Test Star'
+
+UVC 切替メッセージ (VA 0x80a44d98):
+b'\n----change to UVC1.0----'
+
+forceISO / singleISO 付近 (VA 0x80a44cc0):
+b')'
+b'manual'
+b'forceISO'
+b'force ISO flag=%d\n'
+b'singleISO'
+b'ep1 single ISO,can extend to 3 iso packet,ep8 disable'
+b'default case,ep1'

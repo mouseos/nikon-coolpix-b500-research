@@ -1,0 +1,92 @@
+0x80896f34  lw       $a2, 0x10($sp)
+0x80896f38  sltu     $v0, $a2, $s2
+0x80896f3c  beqz     $v0, 0x80896f60
+0x80896f40  lui      $a0, 0x80bd
+0x80896f44  lui      $v0, 0x8007
+0x80896f48  addiu    $a0, $a0, 0x4f4c  ; -> "Fw verify failed: size unmatch, origial 0x%x, re"
+0x80896f4c  addiu    $v0, $v0, -0x3e38  ; -> 0x8006c1c8
+0x80896f50  jalr     $v0
+0x80896f54  move     $a1, $s2
+0x80896f58  j        0x808970b4
+0x80896f5c  addiu    $s1, $zero, 0x17
+0x80896f60  lui      $v0, 0x8006
+0x80896f64  addiu    $v0, $v0, 0x29e8  ; -> 0x800629e8
+0x80896f68  jalr     $v0
+0x80896f6c  move     $a0, $a2
+0x80896f70  bnez     $v0, 0x80896f94
+0x80896f74  move     $s0, $v0
+0x80896f78  lui      $a0, 0x80bd
+0x80896f7c  lui      $v0, 0x8007
+0x80896f80  addiu    $v0, $v0, -0x3ed8  ; -> 0x8006c128
+0x80896f84  jalr     $v0
+0x80896f88  addiu    $a0, $a0, 0x4f8c  ; -> "alloc buf for reading fw back faild."
+0x80896f8c  j        0x808970b4
+0x80896f90  addiu    $s1, $zero, 2
+0x80896f94  lw       $v0, -0x2eb8($gp)
+0x80896f98  sltiu    $v1, $v0, 6
+0x80896f9c  beqz     $v1, 0x80897030
+0x80896fa0  lui      $v1, 0x80bd
+0x80896fa4  sll      $v0, $v0, 2
+0x80896fa8  addiu    $v1, $v1, 0x5554  ; -> 0x80bd5554
+0x80896fac  addu     $v0, $v1, $v0
+0x80896fb0  lw       $v0, ($v0)
+0x80896fb4  jr       $v0
+0x80896fb8  nop      
+0x80896fbc  lui      $v0, 0x8015
+0x80896fc0  move     $a0, $s0
+0x80896fc4  lw       $a1, 0x10($sp)
+0x80896fc8  move     $a2, $zero
+0x80896fcc  move     $a3, $zero
+0x80896fd0  j        0x80897028
+0x80896fd4  addiu    $v0, $v0, -0x27c4  ; -> 0x8014d83c
+0x80896fd8  lui      $v0, 0x804e
+0x80896fdc  move     $a0, $s0
+0x80896fe0  lw       $a1, 0x10($sp)
+0x80896fe4  move     $a2, $zero
+0x80896fe8  move     $a3, $zero
+0x80896fec  j        0x80897028
+0x80896ff0  addiu    $v0, $v0, -0x199c  ; -> 0x804de664
+0x80896ff4  lui      $v0, 0x804e
+0x80896ff8  move     $a0, $s0
+0x80896ffc  lw       $a1, 0x10($sp)
+0x80897000  move     $a2, $zero
+0x80897004  move     $a3, $zero
+0x80897008  j        0x80897028
+0x8089700c  addiu    $v0, $v0, -0x64c8  ; -> 0x804d9b38
+0x80897010  lui      $v0, 0x8015
+0x80897014  lw       $a1, 0x10($sp)
+0x80897018  move     $a0, $s0
+0x8089701c  move     $a2, $zero
+0x80897020  move     $a3, $zero
+0x80897024  addiu    $v0, $v0, 0x777c  ; -> 0x8015777c
+0x80897028  jalr     $v0
+0x8089702c  nop      
+0x80897030  lui      $v0, 0x8007
+0x80897034  move     $a0, $s3
+0x80897038  move     $a1, $s0
+0x8089703c  addiu    $v0, $v0, -0xe20  ; -> 0x8006f1e0
+0x80897040  jalr     $v0
+0x80897044  move     $a2, $s2
+0x80897048  beqz     $v0, 0x80897090
+0x8089704c  lui      $a0, 0x80bd
+0x80897050  lui      $a0, 0x80bd
+0x80897054  lui      $v0, 0x8007
+0x80897058  addiu    $a0, $a0, 0x4fb4  ; -> 0x80bd4fb4
+0x8089705c  move     $a1, $s2
+0x80897060  addiu    $v0, $v0, -0x3e38  ; -> 0x8006c1c8
+0x80897064  jalr     $v0
+0x80897068  lui      $s1, 0x8007
+0x8089706c  addiu    $s1, $s1, -0x2bb0  ; -> 0x8006d450
+0x80897070  move     $a0, $s3
+0x80897074  jalr     $s1
+0x80897078  addiu    $a1, $zero, 0x100
+0x8089707c  move     $a0, $s0
+0x80897080  jalr     $s1
+0x80897084  addiu    $a1, $zero, 0x100
+0x80897088  j        0x808970a0
+0x8089708c  addiu    $s1, $zero, 0x17
+0x80897090  lui      $v0, 0x8007
+0x80897094  addiu    $v0, $v0, -0x3ed8  ; -> 0x8006c128
+0x80897098  jalr     $v0
+0x8089709c  addiu    $a0, $a0, 0x4fd8  ; -> "[CardUpdate]verify fw success."
+0x808970a0  lui      $v0, 0x8006

@@ -1,0 +1,8 @@
+HIT SUNP0001.RAW at 0x80092594: addiu $a0, $a0, 0x7e90
+HIT %s\DCIM\RAW%d_%dx%d_%d.RAW at 0x80367330: addiu $a1, $a1, -0x3f08
+HIT A:\RO_RES\USBUVC15.BIN at 0x8039b7c4: addiu $a1, $a1, 0x4d80
+HIT A:\RO_RES\USBUVC.BIN at 0x8039b834: addiu $a1, $a1, 0x4db4
+HIT [PSOLID] sw reduceNoise s at 0x803bc998: addiu $a1, $a1, -0x2830
+HIT psolid_denoise_iq_cb at 0x806da23c: addiu $a1, $a1, -0x2af4
+HIT not SUNP BRN file at 0x806ef3a4: addiu $a0, $a0, 0x3a78
+HIT [CardUpdate]verify fw success. at 0x8089709c: addiu $a0, $a0, 0x4fd8

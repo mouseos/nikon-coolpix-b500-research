@@ -1,0 +1,21 @@
+# 電源投入モードのディスパッチャ (モードID 0xF2000000+index, テーブル 0x80a8d170)
+
+0x805ec2d0  lui      $v0, 0xe00
+0x805ec2d4  addiu    $sp, $sp, -0x28
+0x805ec2d8  addu     $v0, $a0, $v0
+0x805ec2dc  sltiu    $v1, $v0, 0x1e
+0x805ec2e0  sw       $s0, 0x18($sp)
+0x805ec2e4  sw       $ra, 0x24($sp)
+0x805ec2e8  sw       $s2, 0x20($sp)
+0x805ec2ec  sw       $s1, 0x1c($sp)
+0x805ec2f0  beqz     $v1, 0x805ecee0
+0x805ec2f4  move     $s0, $a0
+0x805ec2f8  lui      $v1, 0x80a9
+0x805ec2fc  sll      $v0, $v0, 2
+0x805ec300  addiu    $v1, $v1, -0x2e90  ; -> 0x80a8d170
+0x805ec304  addu     $v0, $v1, $v0
+0x805ec308  lw       $v0, ($v0)
+0x805ec30c  jr       $v0
+0x805ec310  nop      
+
+# テストモードのスタブ (表示して校正モード入口 0x806ea9e0 へ)

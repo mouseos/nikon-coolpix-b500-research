@@ -1,0 +1,14 @@
+0x803bc98c  bne      $v0, $v1, 0x803bc9c4
+0x803bc990  addiu    $s2, $s1, -0x7d74
+0x803bc994  lui      $a1, 0x80a5
+0x803bc998  addiu    $a1, $a1, -0x2830  ; -> "[PSOLID] sw reduceNoise s"
+0x803bc99c  jal      0x800679a4
+0x803bc9a0  move     $a0, $zero
+0x803bc9a4  lui      $a0, 0x80fe
+0x803bc9a8  jal      0x803e9f0c
+0x803bc9ac  addiu    $a0, $a0, -0x7ce4
+0x803bc9b0  lui      $a1, 0x80a5
+0x803bc9b4  move     $a0, $zero
+0x803bc9b8  addiu    $a1, $a1, -0x2814  ; -> "[PSOLID] sw reduceNoise e"
+0x803bc9bc  jal      0x800679a4
+0x803bc9c0  addiu    $s2, $s1, -0x7d74

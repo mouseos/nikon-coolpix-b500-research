@@ -1,0 +1,35 @@
+0x80076394  addiu    $sp, $sp, -0x20
+0x80076398  move     $a0, $zero
+0x8007639c  sw       $ra, 0x1c($sp)
+0x800763a0  sw       $s2, 0x18($sp)
+0x800763a4  sw       $s1, 0x14($sp)
+0x800763a8  sw       $s0, 0x10($sp)
+0x800763ac  lui      $s1, 0x809e
+0x800763b0  jal      0x8005e3e4
+0x800763b4  lui      $s0, 0x809e
+0x800763b8  move     $a3, $v0
+0x800763bc  addiu    $a1, $s1, 0x2f58  ; -> "%s @%ds"
+0x800763c0  addiu    $a2, $s0, 0x3014  ; -> "sony_imx206_init"
+0x800763c4  jal      0x800679a4
+0x800763c8  move     $a0, $zero
+0x800763cc  jal      0x8005e3e4
+0x800763d0  move     $a0, $zero
+0x800763d4  move     $a3, $v0
+0x800763d8  addiu    $a1, $s1, 0x2f58  ; -> "%s @%ds"
+0x800763dc  addiu    $a2, $s0, 0x3014  ; -> "sony_imx206_init"
+0x800763e0  jal      0x800679a4
+0x800763e4  addiu    $a0, $zero, 1
+0x800763e8  jal      0x8005e3e4
+0x800763ec  move     $a0, $zero
+0x800763f0  move     $a3, $v0
+0x800763f4  addiu    $a1, $s1, 0x2f58  ; -> "%s @%ds"
+0x800763f8  addiu    $a2, $s0, 0x3014  ; -> "sony_imx206_init"
+0x800763fc  jal      0x800679a4
+0x80076400  addiu    $a0, $zero, 2
+0x80076404  jal      0x8005e3e4
+0x80076408  move     $a0, $zero
+0x8007640c  move     $a3, $v0
+0x80076410  addiu    $a1, $s1, 0x2f58  ; -> "%s @%ds"
+0x80076414  addiu    $a2, $s0, 0x3014  ; -> "sony_imx206_init"
+0x80076418  jal      0x800679a4
+0x8007641c  addiu    $a0, $zero, 3

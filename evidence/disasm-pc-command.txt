@@ -1,0 +1,70 @@
+0x8039b780  move     $a0, $s0
+0x8039b784  jal      0x8006f818
+0x8039b788  addiu    $a1, $a1, 0x4d7c
+0x8039b78c  bnez     $v0, 0x8039b854
+0x8039b790  lui      $a1, 0x80a4
+0x8039b794  jal      0x8041c034
+0x8039b798  move     $a0, $zero
+0x8039b79c  addiu    $a0, $zero, 0x202
+0x8039b7a0  addiu    $a1, $zero, 1
+0x8039b7a4  jal      0x8041c6b8
+0x8039b7a8  sb       $zero, -0x3e98($gp)
+0x8039b7ac  addiu    $a1, $zero, 0xa
+0x8039b7b0  jal      0x800143e8
+0x8039b7b4  addiu    $a0, $zero, 3
+0x8039b7b8  jal      0x8041bfa8
+0x8039b7bc  addiu    $a0, $zero, 1
+0x8039b7c0  lui      $a1, 0x80a4
+0x8039b7c4  addiu    $a1, $a1, 0x4d80  ; -> "A:\RO_RES\USBUVC15.BIN"
+0x8039b7c8  jal      0x8041a380
+0x8039b7cc  addiu    $a0, $zero, 0x12
+0x8039b7d0  jal      0x8041c034
+0x8039b7d4  addiu    $a0, $zero, 1
+0x8039b7d8  jal      0x800636b8
+0x8039b7dc  nop      
+0x8039b7e0  j        0x8039b840
+0x8039b7e4  move     $s0, $v0
+0x8039b7e8  jal      0x8006660c
+0x8039b7ec  addiu    $a0, $zero, 0xa
+0x8039b7f0  jal      0x800636b8
+0x8039b7f4  nop      
+0x8039b7f8  subu     $v0, $v0, $s0
+0x8039b7fc  sltiu    $v0, $v0, 0x1f5
+0x8039b800  bnez     $v0, 0x8039b844
+0x8039b804  lbu      $v0, -0x3e98($gp)
+0x8039b808  lui      $a0, 0x80a4
+0x8039b80c  jal      0x8006c128
+0x8039b810  addiu    $a0, $a0, 0x4d98  ; -> 0x80a44d98
+0x8039b814  jal      0x8041c034
+0x8039b818  move     $a0, $zero
+0x8039b81c  addiu    $a0, $zero, 0x202
+0x8039b820  jal      0x8041c6b8
+0x8039b824  move     $a1, $zero
+0x8039b828  lui      $a1, 0x80a4
+0x8039b82c  addiu    $a0, $zero, 0x12
+0x8039b830  jal      0x8041a380
+0x8039b834  addiu    $a1, $a1, 0x4db4  ; -> "A:\RO_RES\USBUVC.BIN"
+0x8039b838  j        0x8039b888
+0x8039b83c  nop      
+0x8039b840  lbu      $v0, -0x3e98($gp)
+0x8039b844  beqz     $v0, 0x8039b7e8
+0x8039b848  lw       $ra, 0x34($sp)
+0x8039b84c  j        0x8039ba58
+0x8039b850  lw       $s4, 0x30($sp)
+0x8039b854  move     $a0, $s0
+0x8039b858  jal      0x8006f818
+0x8039b85c  addiu    $a1, $a1, 0x4dcc  ; -> "multi"
+0x8039b860  bnez     $v0, 0x8039b898
+0x8039b864  lui      $a1, 0x80a4
+0x8039b868  jal      0x8041c034
+0x8039b86c  move     $a0, $zero
+0x8039b870  addiu    $a0, $zero, 3
+0x8039b874  jal      0x800143e8
+0x8039b878  addiu    $a1, $zero, 0xa
+0x8039b87c  addiu    $a0, $zero, 5
+0x8039b880  jal      0x8041bfa8
+0x8039b884  nop      
+0x8039b888  jal      0x8041c034
+0x8039b88c  addiu    $a0, $zero, 1
+0x8039b890  j        0x8039ba54
+0x8039b894  lw       $ra, 0x34($sp)

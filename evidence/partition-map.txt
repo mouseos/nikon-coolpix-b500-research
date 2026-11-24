@@ -1,0 +1,31 @@
+file size: 39106238 (0x254b6be)
+magic: SUNP BURN FILE
+header[0x10] total_size: 0x0254b6be (39106238)
+header[0x14] hdr1_offset: 0x00093400 (603136)
+header[0x18] hdr2_offset: 0x00094400 (607232)
+header[0x1c] main_image_offset: 0x01714520 (24200480)
+header[0x20] (zero): 0x00000000 (0)
+header[0x24] hdr3_offset: 0x0254ad20 (39103776)
+HDR1 @ 0x93400: b'SUNP BURN HDR 1\x00'
+HDR2 @ 0x94400: b'SUNP BURN HDR 2\x00'
+HDR3 @ 0x254ad20: b'SUNP BURN HDR 3\x00'
+bootloader image: 0x200 .. 0x93400 (size 0x93200)
+FAT A (RO_RES): {'offset': 607520, 'bytes_per_sector': 512, 'sectors_per_cluster': 4, 'reserved_sectors': 1, 'fats': 2, 'root_entries': 512, 'fat_sectors': 44, 'total_sectors': 45056, 'size': 23068672, 'end': 23676192, 'fs_type': 'FAT16'}
+FAT B (USER_RES): {'offset': 23676192, 'bytes_per_sector': 512, 'sectors_per_cluster': 1, 'reserved_sectors': 1, 'fats': 2, 'root_entries': 512, 'fat_sectors': 3, 'total_sectors': 1024, 'size': 524288, 'end': 24200480, 'fs_type': 'FAT12'}
+main image: 0x1714520 .. 0x254ad20 (size 0xe36800)
+HDR3 entries: 14
+  [0] A:\RO_RES\COLD.BIN
+  [1] A:\RO_RES\DEFTPXL0.BIN
+  [2] A:\RO_RES\DEFTPXL1.BIN
+  [3] A:\RO_RES\BPCAP.BIN
+  [4] A:\RO_RES\BPVIDEO0.BIN
+  [5] A:\RO_RES\BPVIDEO1.BIN
+  [6] A:\RO_RES\BPVIDEO2.BIN
+  [7] A:\RO_RES\BPVIDEO3.BIN
+  [8] A:\RO_RES\BPVIDEO4.BIN
+  [9] A:\RO_RES\VIDEOPIX0.BIN
+  [10] A:\RO_RES\VIDEOPIX1.BIN
+  [11] A:\RO_RES\VIDEOPIX2.BIN
+  [12] A:\RO_RES\VIDEOPIX3.BIN
+  [13] A:\RO_RES\VIDEOPIX4.BIN
+tail (DRAM param): 0x254b360 .. 0x254b6be, starts b'DRAMPAR1'

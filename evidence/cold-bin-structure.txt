@@ -1,0 +1,15 @@
+RO_RES/COLD.BIN は FIF1 コンテナ (1184 バイト)
+エントリ数: 3
+  CLBTAF.BIN: データ位置 0x40, サイズ 64
+  COLDDATA.BIN: データ位置 0x80, サイズ 1024
+    COLDDATA[0x1C] = 0  (テストモード突入条件Aが読むバイト)
+    COLDDATA 先頭16バイト: 5f000000000000000000000000000000
+  COLDDATF.BIN: データ位置 0x480, サイズ 1
+
+校正項目テーブル (0x80ab2fc4, 12バイトスロット×5):
+  OB
+  AGC
+  50CM Focus
+  Light DPC
+  Dark DPC
+続く 0x80ab3000 以降は各項目の処理関数へのポインタ列

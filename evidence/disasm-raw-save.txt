@@ -1,0 +1,62 @@
+0x803672c0  addiu    $sp, $sp, -0x60
+0x803672c4  lw       $v0, ($a2)
+0x803672c8  sw       $s4, 0x58($sp)
+0x803672cc  sw       $s1, 0x4c($sp)
+0x803672d0  sw       $s0, 0x48($sp)
+0x803672d4  sw       $ra, 0x5c($sp)
+0x803672d8  sw       $s3, 0x54($sp)
+0x803672dc  sw       $s2, 0x50($sp)
+0x803672e0  move     $s4, $a0
+0x803672e4  move     $s1, $a2
+0x803672e8  beqz     $a1, 0x80367310
+0x803672ec  andi     $s0, $v0, 0xffff
+0x803672f0  addiu    $v1, $zero, 4
+0x803672f4  bne      $a1, $v1, 0x80367304
+0x803672f8  sll      $s0, $v0, 1
+0x803672fc  j        0x80367310
+0x80367300  andi     $s0, $s0, 0xffff
+0x80367304  addiu    $s0, $zero, 3
+0x80367308  mul      $s0, $s0, $v0
+0x8036730c  ext      $s0, $s0, 1, 0x10
+0x80367310  lui      $s3, 0x80e0
+0x80367314  addiu    $s2, $sp, 0x20
+0x80367318  lbu      $a3, -0x25a3($s3)
+0x8036731c  sw       $v0, 0x10($sp)
+0x80367320  lui      $a1, 0x80a4
+0x80367324  lw       $v0, 4($s1)
+0x80367328  lui      $a2, 0x80a0
+0x8036732c  move     $a0, $s2
+0x80367330  addiu    $a1, $a1, -0x3f08  ; -> "%s\DCIM\RAW%d_%dx%d_%d.RAW"
+0x80367334  addiu    $a2, $a2, 0x7948  ; -> 0x80a07948
+0x80367338  sw       $v0, 0x14($sp)
+0x8036733c  jal      0x8006bf88
+0x80367340  sw       $s0, 0x18($sp)
+0x80367344  lw       $a1, ($s1)
+0x80367348  lw       $a2, 4($s1)
+0x8036734c  lui      $a0, 0x80a4
+0x80367350  addiu    $a0, $a0, -0x3eec  ; -> 0x80a3c114
+0x80367354  move     $a3, $s0
+0x80367358  jal      0x8006c1c8
+0x8036735c  sw       $s2, 0x10($sp)
+0x80367360  move     $a0, $s2
+0x80367364  jal      0x8015cbd8
+0x80367368  addiu    $a1, $zero, 0x25
+0x8036736c  beqz     $v0, 0x80367390
+0x80367370  move     $s2, $v0
+0x80367374  lw       $a2, 4($s1)
+0x80367378  move     $a0, $v0
+0x8036737c  mul      $a2, $s0, $a2
+0x80367380  jal      0x8015d110
+0x80367384  move     $a1, $s4
+0x80367388  jal      0x8015cb44
+0x8036738c  move     $a0, $s2
+0x80367390  lbu      $v0, -0x25a3($s3)
+0x80367394  lw       $ra, 0x5c($sp)
+0x80367398  addiu    $v0, $v0, 1
+0x8036739c  sb       $v0, -0x25a3($s3)
+0x803673a0  lw       $s4, 0x58($sp)
+0x803673a4  lw       $s3, 0x54($sp)
+0x803673a8  lw       $s2, 0x50($sp)
+0x803673ac  lw       $s1, 0x4c($sp)
+0x803673b0  lw       $s0, 0x48($sp)
+0x803673b4  jr       $ra

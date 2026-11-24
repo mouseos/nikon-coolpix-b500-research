@@ -1,0 +1,12 @@
+調査対象ファイルとハッシュ (2026-11-24 実測)
+
+アップデーター: F-B500-V15W_0_rqle.exe
+  size: 12005248
+  sha256: 821279858ea1976ebf26ebccbef088b7b4671def43e61f2f513bf59e85641ba2  /home/hatch/workspace/user/files/F-B500-V15W_0_rqle.exe
+
+展開後: B500Update/firmware/firmware.bin (書庫内はこの1ファイルのみ)
+  size: 39106238
+  sha256: b1ab90723d9d1e42957b0fef18bcf186f430bffb2a240f2a36f7c10ad102a50e  /tmp/b500/unrar_out/B500Update/firmware/firmware.bin
+
+形式: WinRAR SFX (RAR 1.5形式, 先頭102912バイトがPE32 SFXモジュール,
+オフセット102912からRAR書庫)。SFXコメントは TempMode / Silent=1。

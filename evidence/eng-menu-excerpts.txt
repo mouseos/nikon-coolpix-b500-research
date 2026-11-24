@@ -1,0 +1,55 @@
+--- AF area mode 周辺 (580-586) ---
+--- lines 298-310 ---
+298: Movie
+299: Single AF
+300: Full-time AF
+301: Autofocus mode
+302: Autofocus mode
+303: Movie options
+304: Movie options
+305: Electronic VR
+306: Scene menu
+307: Sports
+308: Night portrait
+309: Party/indoor
+310: Sunset
+--- lines 578-590 ---
+578: 
+579: AF area mode
+580: Auto
+581: Face priority
+582: Manual
+583: Center
+584: Frame intvl
+585: Frame intvl
+586: 2 s
+587: 3 s
+588: 5 s
+589: 10 s
+590: Too many images selected.
+--- lines 695-702 ---
+695: 
+696: 
+697: Movie frame+auto info
+698: ISO 80-400
+699: ISO 80-800
+700: Year/Month/Day
+701: Month/Day/Year
+702: Day/Month/Year
+--- lines 976-982 ---
+976: 
+977: ISO 125-400
+978: ISO 125-800
+979: For backlit subjects. For
+980: high-contrast landscapes,
+981: turn HDR on to create a
+982: photo from a series of
+--- lines 165-172 ---
+165: Interface
+166: USB
+167: Mass storage
+168: Video mode
+169: NTSC
+170: PAL
+171: Auto transfer
+172: Replace current

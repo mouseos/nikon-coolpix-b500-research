@@ -1,0 +1,30 @@
+0x806ef330  addiu    $a0, $s1, -0x1e58
+0x806ef334  jal      0x8015cbd8
+0x806ef338  addiu    $a1, $zero, 0x10
+0x806ef33c  beqz     $v0, 0x806ef54c
+0x806ef340  move     $s0, $v0
+0x806ef344  move     $a0, $v0
+0x806ef348  addiu    $a1, $sp, 0x28
+0x806ef34c  jal      0x8015cc50
+0x806ef350  addiu    $a2, $zero, 0x20
+0x806ef354  addiu    $v1, $zero, 0x20
+0x806ef358  beq      $v0, $v1, 0x806ef36c
+0x806ef35c  addiu    $a1, $sp, 0x28
+0x806ef360  lui      $a0, 0x80ab
+0x806ef364  j        0x806ef534
+0x806ef368  addiu    $a0, $a0, 0x3a3c  ; -> "sp5kFsFileRead() failed"
+0x806ef36c  lui      $a0, 0x80ab
+0x806ef370  jal      0x8006c1c8
+0x806ef374  addiu    $a0, $a0, 0x3a54  ; -> 0x80ab3a54
+0x806ef378  jal      0x8006bfcc
+0x806ef37c  addiu    $a0, $zero, 0xa
+0x806ef380  lui      $a1, 0x80ab
+0x806ef384  addiu    $a0, $sp, 0x28
+0x806ef388  addiu    $a1, $a1, 0x3a68  ; -> "SUNP BURN FILE"
+0x806ef38c  jal      0x8006f1e0
+0x806ef390  addiu    $a2, $zero, 0xe
+0x806ef394  beqz     $v0, 0x806ef3a8
+0x806ef398  addiu    $a2, $zero, 4
+0x806ef39c  lui      $a0, 0x80ab
+0x806ef3a0  j        0x806ef534
+0x806ef3a4  addiu    $a0, $a0, 0x3a78  ; -> "not SUNP BRN file"
