@@ -57,6 +57,8 @@ COOLPIX B500 の公式ファームウェアアップデーター (V1.5) を展�
 - [15 ISP の未使用機能](docs/15-isp-unused-features.md)
 
 - [16 同一チップ他機種とのファームウェア比較](docs/16-cross-model-comparison.md)
+
+- [17 ファームウェアを壊した場合の復旧手段](docs/17-recovery.md)
   — WDR、Super Resolution、JPEG Ultra、Hi-ISO フローの利用状況
 
 ## 調査方法

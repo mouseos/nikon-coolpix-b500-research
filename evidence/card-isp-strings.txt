@@ -1,0 +1,10 @@
+0x887ab: iCatch Card ISP Version
+0x88bdc: [CardUpdate]update Firmware.
+0x88bbc: [CardUpdate]update res files.
+0x88c20: ***** Card ISP complete! *****
+0x88d04: D:\IBACKUP
+0x820a4: ispBootModeGet
+0x8d534: Update Boot Area
+0x8d5b8: Update FW0 Area
+0x8d65c: Update FW1 Area
+0x8e088: SPI_RAW.BIN
